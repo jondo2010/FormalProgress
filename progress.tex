@@ -1,0 +1,126 @@
+\documentclass[12pt]{report}
+
+\setlength{\parskip}{1em}
+\usepackage{indentfirst}
+\usepackage{float}
+
+\renewcommand*\thesection{\arabic{section}.}
+\renewcommand*\thesubsection{\arabic{section}.\arabic{subsection}.}
+
+\begin{document}
+
+\title{Distributed Automotive Sensor/Actuator Network}
+\author{
+	\hline
+	ECE 4600 Progress Report\\
+	for the period from
+	\\2009-09-01 to 2009-12-31\\
+	\hline
+	\\ \\
+	\textbf{Faculty Advisor}\\
+	Dr. Witold Kinsner, Ph.D., P.Eng., University of Manitoba\\
+	\\
+	\textbf{Submitted by}\\
+	John Hughes\\
+	Michael Jean
+	\\ \\
+	\textbf{Submitted on}
+	\vspace{-1em}
+}
+\maketitle
+
+\section{Summary}
+
+The goal of this project is to deliver four control modules for the UMSAE 2010 Formula racing vehicle. The four modules include an engine and transmission control module, braking control module, wireless telemetry module, and driver interface module.The project is progressing, however significant delays in the manufacturing of printed circuit boards and the acquisition of sponsorship funding to purchase parts has put the project two months behind schedule when compared to predictions made in the project proposal document. In hindsight, the initial timeline proposed did not consider possible delays and was far too optimistic. The funding and supplier issues have been resolved and a revised schedule still allows for delivery of all four modules on time. 
+
+\pagebreak
+
+\section{Background}
+
+As mentioned previously, the goal of the project is to deliver four control modules for the UMSAE 2010 Formula racing vehicle. Each module consists of a printed circuit board containing all the necessary circuitry, wiring harnesses, a weater-proof and shock-proof enclosure to house the physical components, wiring to connect all of the modules to each other and to the various sensors and actuators throughout the vehicl, and software necessary to perform the tasks of the controller.
+
+The engine and transmission control module allows the driver to change gears by paddles, eliminating the need to manually clutch. This reduces driver effort required and increases vehicle performance. The module also allows the driver to change the length of the intake runners, which improves performance of the vehicle under certain driving conditions.
+
+The braking control module allows the driver to adjust the brake bias, that is, the distribution of braking force between the front and rear wheels. This improves driver control over the vehicle and overall driver safety. It also improves performance of the vehicle and eliminates the need for imprecise and impractical manual tuning of the brake bias.
+
+The wireless telemetry module relays information from the various vehicle sensors back to the pit crew over a wireless link. The module incorporates a third-party XBee Pro wireless modem to accomplish the wireless link. Specialized software running on laptops held by the pit crew interpret the information in real-time. This software is third-party and has already been provided to us.
+
+The driver control module is contained within the steering wheel of the vehicle and contains an LCD screen with several knobs and buttons used to adjust settings for the various control modules. The LCD provides feedback to the driver regarding the current state of the vehicle, including wheel speed, engine RPM, fuel level, et cetera. 
+
+The modules are interconnected with an \emph{Controller Area Network} (CAN) that enables quick, error-resiliant communications with only two wires.
+
+\pagebreak
+
+\section{Project Status}
+
+Project is approximately two months behind schedule. Project is within budget constraints. All parts ordered and PCB design files have been sent for manufacture. 
+
+\subsection{Progress}
+
+Several of the milestones have been pushed forward by at least two months. This is due to four major factors:
+\begin{enumerate}
+\item Over-optomistic initial planning due to lack of project management experience by both team members;
+\item Under-estimation of the amount of coursework required; 
+\item Significant delays (over two months) in the manufacturing of the printed circuit boards due to manufacturer demand; and
+\item Critical delays in funding due to decreased UMSAE sponsorship, resulting in the inability to acquire parts and manufacturing facilities in a timely manner.
+\end{enumerate}
+
+\begin{table}[H]
+  \caption{Project milestones.}
+  \label{table:milestones}
+  \centering
+  \begin{tabular}{|l|c|c|r|}
+    \hline
+    Task & Original Target & Status & New Target\\
+    \hline
+    Project Proposal Due & 2009/10/09 & Completed & N/A \\
+    PCB Design Complete & 2009/10/15 & Completed & N/A  \\
+    PCBs Manufactured & 2009/10/30 & Revised & 2009/01/10 \\
+    PCBs Populated and Tested & 2009/11/04 & Revised & 2010/02/01 \\
+    Pneumatic System Modelled & 2009/11/15 & Revised & 2010/01/19 \\
+    CAN Tester Built & 2009/11/30 & Revised & 2010/01/21 \\
+    Software Written & 2009/12/02 & Revised & 2010/02/24 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+Each team member has been working for at least twenty hours per week on the project, on average.
+
+Hardware design of all four modules has been completed by John Hughes. He has submitted his designs to the PCB manufacturer and is expecting them back shortly. He has contacted E.H. Price for assistance in populating the PCBs, which could dramatically reduce the amount of time required for this stage of the project. He has also written up a bill of materials for each module and submitted an order to Digikey. He has begun working on the wireless telemetry software, in collaboration with a computer science undergraduate. 
+
+Software design of all four modules has been completed by Michael Jean. He has acquired a development board to begin early hardware tests, and written a suite of test software for the newly manufactured PCBs. He has written drivers for several of the major microcontroller subsystems such as the CAN and SPI interfaces. When the modules are fully populated, he will begin implementing the various embedded software controllers for each module. He is currently finishing the implementation of the CAN testing device.
+
+Early designs called for an electromechanical motor based actuation of the clutch and gear levers. Further testing proved this infeasable, and a pneumatic design was instead proposed. This system is currently being modelled in Simulink. 
+
+\subsection{Future Plans}
+
+Great efforts have been expended on behalf of both team members. John Hughes has currently completed a large share of his designated tasks for the project. As he is the principle hardware designer, and Michael Jean is the principle software designer, it is only natural that the hardware tasks would be completed before all of the software tasks. It is expected that the work load on John Hughes will be lighter during the last half of the project, while it will be heavier for Michael Jean.
+
+The next steps are:
+\begin{enumerate}
+\item Receive and verify manufactured printed circuit boards;
+\item Populate printed circuit boards; and
+\item Implement embedded software on all four modules.
+\end{enumerate}
+
+\pagebreak
+
+\section{Conclusions}
+
+The project scope has not changed since the initial project proposal, however an over-optomistic timeline and heavy courseload has caused some trouble for the group, namely the project time-line has shifted forward about two months. The project will still be completed under budget and within the time limits allowed. 
+
+\pagebreak
+
+\section{Appendix 1 - Parts Ordered/Received}
+
+\pagebreak
+
+\section{Appendix 2 - Project Schedule}
+
+\pagebreak
+
+\section{Appendix 3 - Budget}
+
+\pagebreak
+
+\end{document}
